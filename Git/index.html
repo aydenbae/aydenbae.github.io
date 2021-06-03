@@ -6,17 +6,25 @@
     
 
     
-    <title>VNTG 기술블로그</title>
+    <title>Git의 대표적인 3가지 workflow | VNTG 기술블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="VNTG 기술블로그">
-<meta property="og:url" content="http://jonggang11.github.io/index.html">
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="Gitflow &#x2F; Github flow &#x2F; Gitlab flow 개발언어(특히나 JavaScript관련)만큼 변화가 많은건 아니지만, Version Control System도 긴 역사끝에 현재는 Git의 전성기가 되었습니다.   VCS로 Git을 도입함에 따라(Gitlab&#x2F;Github의 결정이 남아있지만) 어떤 workflow를 도입할지도 결정이 필요합">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git의 대표적인 3가지 workflow">
+<meta property="og:url" content="http://jonggang11.github.io/Git/index.html">
 <meta property="og:site_name" content="VNTG 기술블로그">
+<meta property="og:description" content="Gitflow &#x2F; Github flow &#x2F; Gitlab flow 개발언어(특히나 JavaScript관련)만큼 변화가 많은건 아니지만, Version Control System도 긴 역사끝에 현재는 Git의 전성기가 되었습니다.   VCS로 Git을 도입함에 따라(Gitlab&#x2F;Github의 결정이 남아있지만) 어떤 workflow를 도입할지도 결정이 필요합">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.linkpicture.com/q/gitgithubgitlab.png">
+<meta property="article:published_time" content="2021-05-31T06:05:46.000Z">
+<meta property="article:modified_time" content="2021-06-03T02:44:01.507Z">
 <meta property="article:author" content="VNTG">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.linkpicture.com/q/gitgithubgitlab.png">
     
 
     
@@ -157,307 +165,302 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">Home</em>
+    <a class="page-title-link" href="/categories/Git/">Git</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Git" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2021" class="archive-year"><i class="icon fa fa-calendar-o"></i>2021</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexoVSgatsby/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.imgur.com/yGnymMq.png)" alt="Hexo &amp; Gatsby 차이점(주관적)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://jonggang11.github.io/hexoVSgatsby/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Static-Site-Generator/">Static Site Generator</a>
-            </div>
-            <div class="date"><time datetime="2021-06-03T04:05:46.000Z" itemprop="datePublished">2021-06-03</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/hexoVSgatsby/">Hexo &amp; Gatsby 차이점(주관적)</a>
+        Git의 대표적인 3가지 workflow
         </h1>
     
 
-        <p class="article-excerpt">
-            1. Setup Process
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/Git/" class="article-date">
+       <time datetime="2021-05-31T06:05:46.000Z" itemprop="datePublished">2021-05-31</time>
+    </a>
+  </div>
 
 
-Hexo
-Gatsby
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/Git/" class="article-date">
+     <time datetime="2021-06-03T02:44:01.507Z" itemprop="dateModified">2021-06-03</time>
+  </a>
+</div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <p><strong><font size="8"> Gitflow / Github flow / Gitlab flow</font></strong></p>
+<p>개발언어(특히나 JavaScript관련)만큼 변화가 많은건 아니지만, Version Control System도 긴 역사끝에 현재는 Git의 전성기가 되었습니다.</p>
+<center><img src="https://www.linkpicture.com/q/historyofvcs.jpg" class="img-responsive"></center>
+
+<p><strong>VCS로 Git을 도입함에 따라(Gitlab/Github의 결정이 남아있지만) 어떤 workflow를 도입할지도 결정이 필요합니다. </strong></p>
+<p>대표적인 <strong>3가지 workflow</strong>의 특징을 간략하게 정리합니다.  </p>
+<h2 id="Gitflow"><a href="#Gitflow" class="headerlink" title="Gitflow"></a>Gitflow</h2><blockquote>
+<center><img src="https://www.linkpicture.com/q/gitlab_flow_gitdashflow.png" class="img-responsive"></center>
+</blockquote>
+<p>5개로 가장 많은 branch가 존재하며  그만큼 복잡도가 높음  </p>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 2px solid #000000;
+  background-color: white;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+</style>
+</head>
+<body>
+
+
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Develop</th>
+    <th>Release</th>
+    <th>Hotfix</th>
+    <th>Master</th>
+  </tr>
+  <tr>
+    <td>임시</td>
+    <td>기반</td>
+    <td>임시</td>
+    <td>임시</td>
+    <td>기반</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+
+<h4 id="Master"><a href="#Master" class="headerlink" title="Master"></a>Master</h4><ul>
+<li>중심이 되는 2개의 branch 중 하나. 최종 릴리즈에 사용되는 branch로 태깅을 통해 버전관리 </li>
+</ul>
+<h4 id="Develop"><a href="#Develop" class="headerlink" title="Develop"></a>Develop</h4><ul>
+<li>중심이 되는 또다른 branch. 차기 릴리즈를 위한 개발의 메인으로 추가 기능 개발시 Develop에서 Feature branch를 생성. </li>
+<li>개발이 완료된 기능은 Develop branch로 merge  </li>
+</ul>
+<h4 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h4><ul>
+<li>Feature branch는 origin에 반영되는게 아닌, 개발자의 repo에 존재  </li>
+<li>Merge가 완료되면 branch는 삭제  </li>
+</ul>
+<h4 id="Release"><a href="#Release" class="headerlink" title="Release"></a>Release</h4><p>기능개발이 완료되어 차기 릴리즈를 위한 준비가 되면 Develop branch에서 생성  </p>
+<ul>
+<li>이 시점부터 Develop branch에는 차차기 릴리즈를 위한 개발이 가능  </li>
+</ul>
+<p>Release branch에는 버그픽스를 위한 수정만 커밋되고, 버그픽스가 완료되면 Master branch, Developer branch의 두곳에 merge  </p>
+<ul>
+<li>Master branch에 tagging을 통해 릴리즈버전을 기록</li>
+</ul>
+<h4 id="Hotfix"><a href="#Hotfix" class="headerlink" title="Hotfix"></a>Hotfix</h4><p>Production환경에서 버그가 발생하면 Master branch에서 생성.<br>수정 완료 후 Master branch, Developer branch의 두곳에 merge</p>
+<ul>
+<li>Master branch에 tagging을 통해 핫픽스 릴리즈버전을 기록</li>
+<li>Release branch가 있다면 해당 branch에도 merge 필요</li>
+</ul>
+<p><strong>GitFlow는 실제 운용이 복잡</strong></p>
+<center><img src="https://www.linkpicture.com/q/gitflow.png" class="img-responsive"></center>
+
+<p><img src="https://media.giphy.com/media/cFkiFMDg3iFoI/giphy.gif"></p>
+<h2 id="Github-flow"><a href="#Github-flow" class="headerlink" title="Github flow"></a>Github flow</h2><table>
+<thead>
+<tr>
+<th>Master</th>
+<th>(작업용branch)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>기반</td>
+<td>임시</td>
+</tr>
+</tbody></table>
+<blockquote>
+<center><img src="https://www.linkpicture.com/q/github_flow.png" class="img-responsive"></center>
+</blockquote>
+<h4 id="Master-branch만-stable-하다면-작업용-임시-branch에-대해서는-특별한-규칙이-없는-방식"><a href="#Master-branch만-stable-하다면-작업용-임시-branch에-대해서는-특별한-규칙이-없는-방식" class="headerlink" title="Master branch만 stable 하다면, 작업용 임시 branch에 대해서는 특별한 규칙이 없는 방식"></a>Master branch만 stable 하다면, 작업용 임시 branch에 대해서는 특별한 규칙이 없는 방식</h4><h4 id="Develop-branch가-따로-존재하지-않으며-Feature와-Hotfix-등-모든게-Master-branch에서-생성되고-작업완료-후-Master-branch로-merge됨"><a href="#Develop-branch가-따로-존재하지-않으며-Feature와-Hotfix-등-모든게-Master-branch에서-생성되고-작업완료-후-Master-branch로-merge됨" class="headerlink" title="Develop branch가 따로 존재하지 않으며, Feature와 Hotfix 등 모든게 Master branch에서 생성되고 작업완료 후 Master branch로 merge됨"></a>Develop branch가 따로 존재하지 않으며, Feature와 Hotfix 등 모든게 Master branch에서 생성되고 작업완료 후 Master branch로 merge됨</h4><ul>
+<li>merge할때 무조건 pull request가 필요하며, 코드에 대한 다른 개발자의 리뷰를 통해 master </li>
+<li>이렇다보니 CI는 선택이 아닌 필수</li>
+<li>Master branch로 merge시 즉시 배포까지 이어지게 구성되어야 한다</li>
+<li><ul>
+<li>배포가 자동화 되어있지 않은 상황에서 도입은 현실적으로 어렵다</li>
+</ul>
+</li>
+</ul>
+<h2 id="Gitlab-flow"><a href="#Gitlab-flow" class="headerlink" title="Gitlab flow"></a>Gitlab flow</h2><!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+
+<p>}</p>
+<p>td, th {<br>  border: 2px solid #dddddd;<br>  text-align: left;<br>  padding: 8px;<br>}</p>
+<p>tr:nth-child(even) {<br>  background-color: white;<br>}<br></style><p></p>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Master</th>
+    <th>Pre-production</th>
+    <th>Production</th>
+  </tr>
+  <tr>
+    <td>기반</td>
+    <td>기반</td>
+    <td>기반</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
 
 
 
-난이도 낮음
-난이도 비교적 있음
+<blockquote>
+<center><img src="https://www.linkpicture.com/q/gitlab_flow_environment_branches.png" class="img-responsive"></center>
+</blockquote>
+<p>&nbsp;</p>
+
+<p>Gitlab에서는 하나가 아닌 몇가지 flow를 제시하고 있는데, 그중 대표적인 Environment branches with Gitlab flow를 리뷰  </p>
+<p>Gitlab의 Production branch는 Gitflow의 Master branch 역할과 동일<br>Pre-production branch는 Master → Production으로 바로 반영하지 않고 staging과 production의 중간버퍼 단계로 추가됨</p>
+<ul>
+<li>Gitlab의 Master branch는 Pre-production branch, Production branch로 일방적인 deploy 만 진행</li>
+<li> Master branch는 계속 변화가 가능</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
 
 
-로딩 속도 빠름
-로당속도 느림
 
+    <a data-url="http://jonggang11.github.io/Git/" data-id="ckpgemxta00005kupc1ht8uuv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
 
-2. Developer Experience
-        </p>
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://flamingotiger.github.io/image/thumb/hexo-thumb.jpg)" alt="Hexo 설치 및 사용 메뉴얼" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://jonggang11.github.io/hexo/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Static-Site-Generator/">Static Site Generator</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Static-Site-Generator/Hexo/">Hexo</a>
-            </div>
-            <div class="date"><time datetime="2021-06-03T02:05:46.000Z" itemprop="datePublished">2021-06-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo/">Hexo 설치 및 사용 메뉴얼</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1.초기설정
-Node.js 다운로드
-명령프롬프트(Command Line/CLI) 에서 npm install -g hexo-cli 입력1npm install -g hexo-cli
-Hexo 파일 폴더 생성후 페이지 생성 확인1234hexo init [폴더명]cd [폴더명]npm installhexo server
-
-2. 테마설정(Hueman 테마이용)
-해당폴더로
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/manual/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://www.gatsbyjs.cn/static/e4755730e3f0ff67b3ebd98342371e7d/a3df1/gradient.jpg)" alt="Gatsby 설치 및 사용 메뉴얼" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://jonggang11.github.io/manual/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Static-Site-Generator/">Static Site Generator</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Static-Site-Generator/Gatsby/">Gatsby</a>
-            </div>
-            <div class="date"><time datetime="2021-06-03T01:05:46.000Z" itemprop="datePublished">2021-06-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/manual/">Gatsby 설치 및 사용 메뉴얼</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Gatsby1.초기설정
-Node.js 다운로드
-명령프롬프트(Command Line/CLI) 에서 npm install -g gatsby-cli 입력1npm install -g gatsby-cli
-템플릿 클론
-해당 홈페이지에 많은 템플릿들을 확인후 선택.
-템플릿 고르고 github repository 링크를 clone
-CLI에서 클론한 링크 입력후 페이지 생
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/CICD/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://www.linkpicture.com/q/gitflow_1.png)" alt="기존 버전관리 및 CICD 현황" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://jonggang11.github.io/CICD/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/CICD/">CICD</a>
-            </div>
-            <div class="date"><time datetime="2021-06-02T07:05:46.000Z" itemprop="datePublished">2021-06-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/CICD/">기존 버전관리 및 CICD 현황</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            소개:
-이 문서는 github, gitlab의 CICD 기능을 테스팅하고 검토하면서 정리한 자료입니다.
-
-&nbsp;
-
-선택 : 설치형 vs SaaS (Software as a Service)
-
-Gitlab은 모든 타입에서 설치형 지원
-Github는 Enterprise 에서만 설치형 지원
-
-IDC나 사내에서 CICD 를 쓸 일이 있으면 필요한 곳에 runn
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/Git/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://www.linkpicture.com/q/gitgithubgitlab.png)" alt="Git의 대표적인 3가지 workflow" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://jonggang11.github.io/Git/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Git/">Git</a>
-            </div>
-            <div class="date"><time datetime="2021-05-31T06:05:46.000Z" itemprop="datePublished">2021-05-31</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/Git/">Git의 대표적인 3가지 workflow</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-             Gitflow / Github flow / Gitlab flow
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "VNTG"
+        },
+        "headline": "Git의 대표적인 3가지 workflow",
+        "image": "http://jonggang11.github.iohttps://www.linkpicture.com/q/gitgithubgitlab.png",
+        "keywords": "",
+        "genre": "Git",
+        "datePublished": "2021-05-31",
+        "dateCreated": "2021-05-31",
+        "dateModified": "2021-06-03",
+        "url": "http://jonggang11.github.io/Git/",
+        "description": " Gitflow / Github flow / Gitlab flow
 개발언어(특히나 JavaScript관련)만큼 변화가 많은건 아니지만, Version Control System도 긴 역사끝에 현재는 Git의 전성기가 되었습니다.
 
 
-VCS로 Git을 도입함에 따라(Gitlab/Github의 결정이 남아있지만) 어떤 workflow를 도입할지도 결정이 필요합
-        </p>
-    </div>
+VCS로 Git을 도입함에 따라(Gitlab/Github의 결정이 남아있지만) 어떤 workflow를 도입할지도 결정이 필요합",
+        "wordCount": 489
+    }
+</script>
+
 </article>
-    
-        </div>
-    
-
-
-    </div></section>
 
 
 
@@ -495,6 +498,23 @@ VCS로 Git을 도입함에 따라(Gitlab/Github의 결정이 남아있지만) �
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/CICD/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            기존 버전관리 및 CICD 현황
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -685,11 +705,13 @@ VCS로 Git을 도입함에 따라(Gitlab/Github의 결정이 남아있지만) �
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://jonggang11.github.io/Git/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
